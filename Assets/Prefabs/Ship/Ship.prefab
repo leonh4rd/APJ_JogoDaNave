@@ -214,6 +214,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b23378f1050eb884b9a5eb9b1bec9e68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootPrefab: {fileID: 3596702423241040220, guid: c1fda0e8e4ba2e84caec2f51cd4fbeb0,
+    type: 3}
+  speed: 10
 --- !u!1 &5936074121278449826
 GameObject:
   m_ObjectHideFlags: 0
