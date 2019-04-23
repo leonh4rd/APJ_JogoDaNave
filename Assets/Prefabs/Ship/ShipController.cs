@@ -26,13 +26,26 @@ public class ShipController : MonoBehaviour
         if(Input.GetButtonDown("Fire1"))
         {
             //Create new shoot object
-            Transform newshoot = Instantiate<Transform>(shootPrefab);
+            Transform newShoot = Instantiate<Transform>(shootPrefab);
 
             //Position shoot object
-            newshoot.position = transform.position;
+            newShoot.position = transform.position;
 
             //Set shoot speed
-            newshoot.GetComponent<ShootController>().speed = 30.0f;
+            newShoot.GetComponent<ShootController>().speed = 30.0f;
+
+            newShoot.tag = "ShipShoot";
         }
+    }
+
+     private void OnTriggerEnter(Collider other) 
+    {
+        if(other.tag == "EnemyShoot")
+        {
+            enabled = false;
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+
     }
 }

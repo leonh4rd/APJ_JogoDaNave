@@ -30,4 +30,14 @@ public class EnemyController : MonoBehaviour
             shootTime = Random.Range(2f, 10f);
         }
     }
+
+    private void OnTriggerEnter(Collider other) {
+        if(other.tag == "ShipShoot")
+        {
+            enabled = false;
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+
+    }
 }

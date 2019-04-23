@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5936074120725873583}
   - component: {fileID: 5936074120725873580}
   - component: {fileID: 5936074120725873581}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 5936074120918308142}
   - component: {fileID: 5936074120918308139}
   - component: {fileID: 5936074120918308140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CannonBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 5936074120936571019}
   - component: {fileID: 4979062071697831425}
   - component: {fileID: 2268598892688009456}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ship
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 5936074121278449825}
   - component: {fileID: 5936074121278449854}
   - component: {fileID: 5936074121278449855}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
