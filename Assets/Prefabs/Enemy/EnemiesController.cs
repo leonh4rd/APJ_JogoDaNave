@@ -22,6 +22,10 @@ public class EnemiesController : MonoBehaviour
         {
             direction = -direction;
         }
+        if(transform.childCount == 0)
+        {
+            CreateGame();
+        }
     }
 
     public void CreateGame()

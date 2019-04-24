@@ -34,6 +34,12 @@ public class EnemyController : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.tag == "ShipShoot")
         {
+            GameObject.FindObjectOfType<ScoreController>().Score += 10;
+            if(GameObject.FindObjectOfType<ScoreController>().Score % 200 == 0)
+            {
+                GameObject.FindObjectOfType<LifeController>().Lifes++;
+            }
+            
             enabled = false;
             Destroy(other.gameObject);
             Destroy(gameObject);

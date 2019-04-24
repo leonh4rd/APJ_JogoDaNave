@@ -42,9 +42,17 @@ public class ShipController : MonoBehaviour
     {
         if(other.tag == "EnemyShoot")
         {
-            enabled = false;
-            Destroy(other.gameObject);
-            Destroy(gameObject);
+            GameObject.FindObjectOfType<LifeController>().Lifes--;
+            if(GameObject.FindObjectOfType<LifeController>().Lifes < 0)
+            {
+                GameObject.FindObjectOfType<LifeController>().Lifes = 0;
+                Debug.Log("GameOver");
+            }else
+            {
+                enabled = false;
+                Destroy(other.gameObject);
+                Destroy(gameObject);
+            }
         }
 
     }
