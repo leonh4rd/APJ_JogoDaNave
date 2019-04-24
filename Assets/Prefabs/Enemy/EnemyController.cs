@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public Transform shootPrefab = null;
+    public Transform explosionPrefab = null;
     float shootTime = 5f;
 
     // Start is called before the first frame update
@@ -41,6 +42,8 @@ public class EnemyController : MonoBehaviour
             }
             
             enabled = false;
+            Transform explosion = Instantiate<Transform>(explosionPrefab);
+            explosion.position = transform.position;
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

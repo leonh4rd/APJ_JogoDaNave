@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ShipController : MonoBehaviour
 {
     public Transform shootPrefab = null;
+    public Transform explosionPrefab = null;
     public float speed = 1.0f;
 
     // Start is called before the first frame update
@@ -51,6 +52,8 @@ public class ShipController : MonoBehaviour
             }else
             {
                 enabled = false;
+                Transform explosion = Instantiate<Transform>(explosionPrefab);
+                explosion.position = transform.position;
                 Destroy(other.gameObject);
                 Destroy(gameObject);
             }

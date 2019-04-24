@@ -216,6 +216,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootPrefab: {fileID: 3596702423241040220, guid: c1fda0e8e4ba2e84caec2f51cd4fbeb0,
     type: 3}
+  explosionPrefab: {fileID: 8732988749116042755, guid: 4914f32331b65494086d2106f4544375,
+    type: 3}
   speed: 10
 --- !u!1 &5936074121278449826
 GameObject:
