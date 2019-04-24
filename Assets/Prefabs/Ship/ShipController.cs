@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShipController : MonoBehaviour
 {
@@ -46,7 +47,7 @@ public class ShipController : MonoBehaviour
             if(GameObject.FindObjectOfType<LifeController>().Lifes < 0)
             {
                 GameObject.FindObjectOfType<LifeController>().Lifes = 0;
-                Debug.Log("GameOver");
+                SceneManager.LoadScene("GameOverScene");
             }else
             {
                 enabled = false;
