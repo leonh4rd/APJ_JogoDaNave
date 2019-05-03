@@ -43,7 +43,7 @@ public class NewShipController : MonoBehaviour
             if(delayRespawn <= 0f)
             {
                 //Activate enemy ships
-                 GameObject.FindObjectOfType<EnemiesController>().enabled = true; 
+                GameObject.FindObjectOfType<EnemiesController>().enabled = true; 
                 EnemyController[] enemies = GameObject.FindObjectsOfType<EnemyController>();
                 foreach (EnemyController enemy in enemies)
                 {

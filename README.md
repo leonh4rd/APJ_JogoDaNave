@@ -9,3 +9,5 @@ Upcoming updates
 > Add varying types of enemies;
 > Customization to player ship with specific abilities;
 > Add power-ups and other gameplay gimmicks;
+
+u1: add player ship animation 
