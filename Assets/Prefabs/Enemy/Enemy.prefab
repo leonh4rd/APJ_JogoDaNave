@@ -62,6 +62,7 @@ MonoBehaviour:
     type: 3}
   explosionPrefab: {fileID: 8732988749116042755, guid: 4914f32331b65494086d2106f4544375,
     type: 3}
+  shootColor: {r: 1, g: 0.19862808, b: 0, a: 0}
 --- !u!1001 &8212943239988781623
 PrefabInstance:
   m_ObjectHideFlags: 0

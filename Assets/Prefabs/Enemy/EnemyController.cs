@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
     public Transform shootPrefab = null;
     public Transform explosionPrefab = null;
     float shootTime = 5f;
+    public Color shootColor;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class EnemyController : MonoBehaviour
                 newShoot.position = transform.position;
                 newShoot.GetComponent<ShootController>().direction = -1;
                 newShoot.tag = "EnemyShoot";
+                newShoot.GetComponent<MeshRenderer>().material.color = shootColor;
             }
             shootTime = Random.Range(2f, 10f);
         }

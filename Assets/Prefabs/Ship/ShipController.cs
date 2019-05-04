@@ -8,6 +8,7 @@ public class ShipController : MonoBehaviour
     public Transform shootPrefab = null;
     public Transform explosionPrefab = null;
     public float speed = 1.0f;
+    public Color shootColor;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,9 @@ public class ShipController : MonoBehaviour
 
             //Set shoot speed
             newShoot.GetComponent<ShootController>().speed = 30.0f;
+
+            //Change shoot color
+            newShoot.GetComponent<MeshRenderer>().material.color = shootColor;
 
             newShoot.tag = "ShipShoot";
         }

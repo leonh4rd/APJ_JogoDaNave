@@ -94,6 +94,7 @@ MonoBehaviour:
   explosionPrefab: {fileID: 8732988749116042755, guid: 4914f32331b65494086d2106f4544375,
     type: 3}
   speed: 10
+  shootColor: {r: 0, g: 0.6165807, b: 1, a: 0}
 --- !u!1001 &5462968130957909365
 PrefabInstance:
   m_ObjectHideFlags: 0
