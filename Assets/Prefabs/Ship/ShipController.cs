@@ -24,6 +24,13 @@ public class ShipController : MonoBehaviour
 
         //Move ship
         transform.Translate(new Vector3(horizontal, 0f, 0f));
+        if(transform.position.x > 24f)
+        {
+            transform.position = new Vector3(24f, transform.position.y, transform.position.z);
+        }else if(transform.position.x < -24f)
+        {
+             transform.position = new Vector3(-24f, transform.position.y, transform.position.z);
+        }
 
         //Shooting
         if(Input.GetButtonDown("Fire1"))
