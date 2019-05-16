@@ -6,31 +6,36 @@ public class EnemyController : MonoBehaviour
 {
     public Transform shootPrefab = null;
     public Transform explosionPrefab = null;
-    float shootTime = 5f;
+    float shootRateMin = 2; 
+    float shootRateMax = 10; 
+    float shootRate = 1f;
+    float shootSpeed = 1f;
+    int maxEnemyShoot = 7;
     public Color shootColor;
 
     // Start is called before the first frame update
     void Start()
     {
-        shootTime = Random.Range(2f, 10f);
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        shootTime -= Time.deltaTime;
-        if(shootTime <= 0f)
+        shootRate -= Time.deltaTime;
+        if(shootRate <= 0f)
         {
             GameObject[] enemyShoots = GameObject.FindGameObjectsWithTag("EnemyShoot");
-            if(enemyShoots.Length < 7)
+            if(enemyShoots.Length < maxEnemyShoot)
             {
                 Transform newShoot = Instantiate<Transform>(shootPrefab);
                 newShoot.position = transform.position;
                 newShoot.GetComponent<ShootController>().direction = -1;
                 newShoot.tag = "EnemyShoot";
+                newShoot.GetComponent<ShootController>().speed *= shootSpeed;
                 newShoot.GetComponent<MeshRenderer>().material.color = shootColor;
             }
-            shootTime = Random.Range(2f, 10f);
+            shootRate = Random.Range(2f, shootRateMax);
         }
     }
 
@@ -50,5 +55,15 @@ public class EnemyController : MonoBehaviour
             Destroy(gameObject);
         }
 
+    }
+
+    public float LevelDifficulty
+    {
+        set
+        {
+            shootSpeed = value * 0.7f;
+            maxEnemyShoot *= (int)value;
+            shootRate = Random.Range(shootRateMin / value, shootRateMax / value);
+        }
     }
 }
